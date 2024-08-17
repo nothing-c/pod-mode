@@ -25,7 +25,7 @@
 
 (defun pod-check-boilerplate ()
   "Check if the buffer requires boilerplate, and, if it does, insert the boilerplate"
-  (if (eq '() (string-match "=pod\n\\(.*\n\\)*=cut" (buffer-substring-no-properties 1 (buffer-size))))
+  (if (or (= 0 (buffer-size)) (eq '() (string-match "=pod\n\\(.*\n\\)*=cut" (buffer-substring-no-properties 1 (buffer-size))))) ;; The OR short-circuits, so the substring is never called and therefore doesn't choke!
       (pod-insert-boilerplate)
     ()))
 
