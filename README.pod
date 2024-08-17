@@ -9,40 +9,6 @@
 There's a good way to do this (parsing the podfile and operating on lisp lists), which isn't the way I'm going to do it. 
 Instead, I shall be using the time-tested technique of blind macros and the less-tested technique of L<structural regex|https://doc.cat-v.org/bell_labs/structural_regexps/>.
 
-=head2 DONE
-
-=over
-
-=item Function for inserting boilerplate in empty file
-
-=item Insert heading (1/2/3/4/5/6)
-
-=item Insert list indent
-
-=item Insert list item
-
-=item Begin/end block
-
-=item For block
-
-=item Marking up region (italic/bold/hyperlink/code/escape/filename/nbsp text/Z<>)
-
-=item Spawning markup
-
-=item Keymap for above functions
-
-=item Rendering and showing in EWW
-
-=item Hook for inserting boilerplate in empty file
-
-=back
-
-=head2 TODO
-
-=over
-
-=back
-
 =head2 Overview
 
 =head3 Keymap
