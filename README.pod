@@ -39,12 +39,6 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =head2 TODO
 
-=over
-
-=item Hook to render on save (variable to set default renderer: text, html, man, latex, fm)
-
-=back
-
 Boilerplate runs on hook, so no problem there
 
 Structural = M, markup = C (that way I can reuse mnemonic binds)
