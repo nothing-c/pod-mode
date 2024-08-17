@@ -29,6 +29,10 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Spawning markup
 
+=item Keymap for above functions
+
+=item Rendering and showing in EWW
+
 =back
 
 =head2 TODO
@@ -37,11 +41,7 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Hook for inserting boilerplate in empty file
 
-=item Rendering and showing in EWW
-
 =item Hook to render on save (variable to set default renderer: text, html, man, latex, fm)
-
-=item Keymap for above functions
 
 Boilerplate runs on hook, so no problem there
 
@@ -71,7 +71,7 @@ Filename: C-c C-f
 
 Nonbreaking space text: C-c C-S-s (region), C-c C-s (insert)
 
-\Z<>: C-c C-z
+ZZ<><Z<>>: C-c C-z
 
 Render as HTML: C-c C-r
 

@@ -1,6 +1,24 @@
 ;; -*- coding: utf-8; lexical-binding: t; -*-
 ;; POD-mode
 
+(defvar pod-renderer '())
+(defvar pod-render-options '())
+
+(setq pod-renderer "pod2html")
+(setq pod-render-options "")
+
+;; Renderers read from stdin by default, so we shell out to them
+(defun pod-render-buffer ()
+  "Render the current POD buffer"
+  (interactive)
+  (shell-command-on-region 1 (buffer-size) (concat pod-renderer " " pod-render-options) "*pod-render-output*"))
+
+(defun pod-show-html ()
+  "Show the rendered POD output"
+  (interactive)
+  (pod-render-buffer)
+  (shr-render-buffer "*pod-render-output*"))
+  
 (defun pod-insert-boilerplate ()
   "Insert the =pod ... =cut tags to define the POD area"
   (insert "=pod\n\n\n\n=cut\n"))
