@@ -34,5 +34,13 @@
   "Insert =for tag"
   (insert "\n=for "))
 
+(defun pod-insert-markup (b e)
+  "Insert markup tag with beginning string b and end string e (e.g., b = 'L<' and e = '>' for a hyperlink)"
+  (let ((rb (region-beginning)) (re (region-end)))
+    (goto-char rb)
+    (insert b)
+    (goto-char (+ (length b) re))
+    (insert e)))
+
 (provide 'pod-mode)
 
