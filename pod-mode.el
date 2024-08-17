@@ -18,9 +18,13 @@
 
 (defun pod-insert-over ()
   "Insert =over ... =back for lists"
-  (insert "=over\n\n\n\n=back\n")
+  (insert "\n=over\n\n\n\n=back\n")
   (re-search-backward "=over")
   (next-line))
+
+(defun pod-insert-item ()
+  "Insert =item tag within list"
+  (insert "\n=item "))
 
 (provide 'pod-mode)
 
