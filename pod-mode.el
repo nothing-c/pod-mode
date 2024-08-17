@@ -11,5 +11,10 @@
       (pod-insert-boilerplate)
     ()))
 
+(defun pod-insert-heading (n)
+  "Insert heading of type n"
+  (insert (concat "\n=head" (int-to-string n)))
+  ()) ;; This doesn't need error handling b/c it's only getting called from the keymap
+
 (provide 'pod-mode)
 
