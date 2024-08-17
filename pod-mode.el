@@ -26,5 +26,13 @@
   "Insert =item tag within list"
   (insert "\n=item "))
 
+(defun pod-insert-begin-end ()
+  "Insert =begin ... =end block"
+  (insert "\n=begin\n\n\n\n=end\n"))
+
+(defun pod-insert-for ()
+  "Insert =for tag"
+  (insert "\n=for "))
+
 (provide 'pod-mode)
 

@@ -21,6 +21,10 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Insert list item
 
+=item Begin/end block
+
+=item For block
+
 =back
 
 =head2 TODO
@@ -32,10 +36,6 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 =item Marking up region (italic/bold/hyperlink/code/escape/filename/nbsp text/Z<>)
 
 =item Spawning markup (using minibuffer for input?)
-
-=item Begin/end block
-
-=item For block
 
 =item Rendering and showing in EWW
 
