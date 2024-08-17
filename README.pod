@@ -23,7 +23,7 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Hook for inserting boilerplate in empty file
 
-=item Insert heading (1/2/3/4/56)
+=item Insert heading (1/2/3/4/5/6)
 
 =item Insert list indent
 
