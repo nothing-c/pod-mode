@@ -43,19 +43,64 @@
     (insert e)))
 
 (defun pod-insert-italic-region ()
+  "Italicize the region"
   (pod-insert-markup "I<" ">"))
 
 (defun pod-insert-bold-region ()
+  "Bold the region"
   (pod-insert-markup "B<" ">"))
 
 (defun pod-insert-link-region ()
+  "Linkify the region (leaving the address empty)"
   (pod-insert-markup "L<" "|>"))
 
 (defun pod-insert-code-region ()
+  "Format the region as code"
   (pod-insert-markup "C<" ">"))
 
 (defun pod-insert-space-region ()
+  "Format the region as non-breaking space text"
   (pod-insert-markup "S<" ">"))
+
+(defun pod-insert-italic ()
+  "Insert italics and position cursor inside"
+  (insert "I<>")
+  (backward-char))
+
+(defun pod-insert-bold ()
+  "Insert bold tag and position cursor inside"
+  (insert "B<>")
+  (backward-char))
+
+(defun pod-insert-link ()
+  "Insert hyperlink and position cursor inside"
+  (insert "L<|>")
+  (backward-char)
+  (backward-char))
+
+(defun pod-insert-code ()
+  "Insert codeblock and position cursor inside"
+  (insert "C<>")
+  (backward-char))
+
+(defun pod-insert-escape ()
+  "Insert escaped character tag and position cursor inside"
+  (insert "E<>")
+  (backward-char))
+
+(defun pod-insert-filename ()
+  "Insert filename tag and position cursor inside"
+  (insert "F<>")
+  (backward-char))
+
+(defun pod-insert-space ()
+  "Insert nonbreaking space text and position cursor inside"
+  (insert "S<>")
+  (backward-char))
+
+(defun pod-insert-null ()
+  "Insert null tag"
+  (insert "Z<>"))
 
 (provide 'pod-mode)
 
