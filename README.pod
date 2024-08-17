@@ -25,6 +25,8 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item For block
 
+=item Marking up region (italic/bold/hyperlink/code/escape/filename/nbsp text/Z<>)
+
 =back
 
 =head2 TODO
@@ -32,8 +34,6 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 =over
 
 =item Hook for inserting boilerplate in empty file
-
-=item Marking up region (italic/bold/hyperlink/code/escape/filename/nbsp text/Z<>)
 
 =item Spawning markup (using minibuffer for input?)
 

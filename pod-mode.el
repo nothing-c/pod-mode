@@ -42,5 +42,20 @@
     (goto-char (+ (length b) re))
     (insert e)))
 
+(defun pod-insert-italic-region ()
+  (pod-insert-markup "I<" ">"))
+
+(defun pod-insert-bold-region ()
+  (pod-insert-markup "B<" ">"))
+
+(defun pod-insert-link-region ()
+  (pod-insert-markup "L<" "|>"))
+
+(defun pod-insert-code-region ()
+  (pod-insert-markup "C<" ">"))
+
+(defun pod-insert-space-region ()
+  (pod-insert-markup "S<" ">"))
+
 (provide 'pod-mode)
 
