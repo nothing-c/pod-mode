@@ -79,6 +79,26 @@ Render: C-c C-r
 
 Render and display as HTML: C-c M-r
 
+=head3 Installation
+
+=over
+
+=item Stick pod-mode.el in your C<~/.emacs.d> or equivalent
+
+=item Stick C<(require 'pod-mode)> in your F<init.el> or F<.emacs> (making sure that it's in your C<load-path>)
+
+=back
+
+=head3 Variables
+
+=over
+
+=item C<pod-renderer>: which pod2xxx renderer you want to use (pod2html is the default; on most Perl installs, pod2html, pod2text, pod2man, and pod2latex are available)
+
+=item C<pod-render-options>: what options you want C<pod-renderer> to be called with (default is an empty string)
+
+=back
+
 =head2 Resources
 
 L<Keymapping|http://xahlee.info/emacs/emacs/elisp_create_major_mode_keymap.html>

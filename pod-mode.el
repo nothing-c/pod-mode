@@ -1,6 +1,8 @@
 ;; -*- coding: utf-8; lexical-binding: t; -*-
 ;; POD-mode
 
+(load-library "shr") ;; Workaround for shr not autoloading shr-render-buffer
+
 (defvar pod-renderer '())
 (defvar pod-render-options '())
 
@@ -32,7 +34,7 @@
 (defun pod-insert-heading (n)
   "Insert heading of type n"
   (interactive)
-  (insert (concat "\n=head" (int-to-string n)))
+  (insert (concat "\n=head " (int-to-string n)))
   ()) ;; This doesn't need error handling b/c it's only getting called from the keymap
 
 (defun pod-insert-over ()
@@ -160,12 +162,12 @@
 (define-key pod-mode-map (kbd "C-c C-f") 'pod-insert-filename)
 (define-key pod-mode-map (kbd "C-c C-s") 'pod-insert-space)
 (define-key pod-mode-map (kbd "C-c C-z") 'pod-insert-null)
-(define-key pod-mode-map (kbd "C-c C-1") '(lambda () (pod-insert-heading 1)))
-(define-key pod-mode-map (kbd "C-c C-2") '(lambda () (pod-insert-heading 2)))
-(define-key pod-mode-map (kbd "C-c C-3") '(lambda () (pod-insert-heading 3)))
-(define-key pod-mode-map (kbd "C-c C-4") '(lambda () (pod-insert-heading 4)))
-(define-key pod-mode-map (kbd "C-c C-5") '(lambda () (pod-insert-heading 5)))
-(define-key pod-mode-map (kbd "C-c C-6") '(lambda () (pod-insert-heading 6)))
+(define-key pod-mode-map (kbd "C-c C-1") '(lambda () (interactive) (pod-insert-heading 1)))
+(define-key pod-mode-map (kbd "C-c C-2") '(lambda () (interactive) (pod-insert-heading 2)))
+(define-key pod-mode-map (kbd "C-c C-3") '(lambda () (interactive) (pod-insert-heading 3)))
+(define-key pod-mode-map (kbd "C-c C-4") '(lambda () (interactive) (pod-insert-heading 4)))
+(define-key pod-mode-map (kbd "C-c C-5") '(lambda () (interactive) (pod-insert-heading 5)))
+(define-key pod-mode-map (kbd "C-c C-6") '(lambda () (interactive) (pod-insert-heading 6)))
 (define-key pod-mode-map (kbd "C-c C-r") 'pod-render-buffer)
 (define-key pod-mode-map (kbd "C-c M-r") 'pod-show-html)
 
@@ -173,5 +175,5 @@
   "Major mode for editing Plain Old Documentation (POD)"
   (use-local-map pod-mode-map)
   (run-hooks 'pod-mode-hook))
-
+(add-to-list 'auto-mode-alist '("\\.pod\\'" . pod-mode))
 (provide 'pod-mode)
