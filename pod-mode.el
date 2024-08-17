@@ -102,5 +102,37 @@
   "Insert null tag"
   (insert "Z<>"))
 
+(defvar pod-mode-hook nil "POD mode hook")
+
+(defvar pod-mode-map (make-sparse-keymap) "POD mode keymap")
+(define-key pod-mode-map (kbd "C-c M-l") 'pod-insert-over)
+(define-key pod-mode-map (kbd "C-c M-i") 'pod-insert-item)
+(define-key pod-mode-map (kbd "C-c M-b") 'pod-insert-begin-end)
+(define-key pod-mode-map (kbd "C-c M-f") 'pod-insert-for)
+(define-key pod-mode-map (kbd "C-c C-S-i") 'pod-insert-italic-region)
+(define-key pod-mode-map (kbd "C-c C-S-b") 'pod-insert-bold-region)
+(define-key pod-mode-map (kbd "C-c C-S-l") 'pod-insert-link-region)
+(define-key pod-mode-map (kbd "C-c C-S-c") 'pod-insert-code-region)
+(define-key pod-mode-map (kbd "C-c C-S-s") 'pod-insert-space-region)
+(define-key pod-mode-map (kbd "C-c C-i") 'pod-insert-italic)
+(define-key pod-mode-map (kbd "C-c C-b") 'pod-insert-bold)
+(define-key pod-mode-map (kbd "C-c C-l") 'pod-insert-link)
+(define-key pod-mode-map (kbd "C-c C-c") 'pod-insert-code)
+(define-key pod-mode-map (kbd "C-c C-e") 'pod-insert-escape)
+(define-key pod-mode-map (kbd "C-c C-f") 'pod-insert-filename)
+(define-key pod-mode-map (kbd "C-c C-s") 'pod-insert-space)
+(define-key pod-mode-map (kbd "C-c C-z") 'pod-insert-null)
+(define-key pod-mode-map (kbd "C-c C-1") '(lambda () (pod-insert-heading 1)))
+(define-key pod-mode-map (kbd "C-c C-2") '(lambda () (pod-insert-heading 2)))
+(define-key pod-mode-map (kbd "C-c C-3") '(lambda () (pod-insert-heading 3)))
+(define-key pod-mode-map (kbd "C-c C-4") '(lambda () (pod-insert-heading 4)))
+(define-key pod-mode-map (kbd "C-c C-5") '(lambda () (pod-insert-heading 5)))
+(define-key pod-mode-map (kbd "C-c C-6") '(lambda () (pod-insert-heading 6)))
+
+(define-derived-mode pod-mode text-mode "POD"
+  "Major mode for editing Plain Old Documentation (POD)"
+  (use-local-map pod-mode-map)
+  (run-hooks 'pod-mode-hook))
+
 (provide 'pod-mode)
 

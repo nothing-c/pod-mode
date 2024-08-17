@@ -49,11 +49,11 @@ Structural = M, markup = C (that way I can reuse mnemonic binds)
 
 Headings: C-c M-1/2/3/4/5/6
 
-List: C-c M-l (over)
+List: C-c M-l (list)
 
-Item: C-c M-i (point)
+Item: C-c M-i (item)
 
-Begin/end: C-c M-b (formatting mode)
+Begin/end: C-c M-b (block)
 
 For: C-c M-f
 
@@ -67,7 +67,7 @@ Code: C-c C-S-c (code region), C-c C-c (insert code)
 
 Escape: C-c C-e
 
-Filename: C-c C-n
+Filename: C-c C-f
 
 Nonbreaking space text: C-c C-S-s (region), C-c C-s (insert)
 
