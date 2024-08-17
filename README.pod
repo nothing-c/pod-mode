@@ -4,6 +4,19 @@
 
 =for html <img src="mascot.jpg" alt="pod-mode mascot">
 
+=head2 Thoughts
+
+There's a good way to do this (parsing the podfile and operating on lisp lists), which isn't the way I'm going to do it. 
+Instead, I shall be using the time-tested technique of blind macros and the less-tested technique of L<structural regex|https://doc.cat-v.org/bell_labs/structural_regexps/>.
+
+=head2 DONE
+
+=over
+
+=item Function for inserting boilerplate in empty file
+
+=back
+
 =head2 TODO
 
 =over
