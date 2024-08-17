@@ -1,0 +1,41 @@
+=pod
+
+=head1 POD-mode: Emacs Plain Old Documentation format major mode
+
+=for html <img src="mascot.jpg" alt="pod-mode mascot">
+
+=head2 TODO
+
+=over
+
+=item Hook for inserting boilerplate in empty file
+
+=item Insert heading (1/2/3/4/56)
+
+=item Insert list indent
+
+=item Insert list item
+
+=item Marking up region (italic/bold/hyperlink/code/escape/filename/nbsp text/Z<>)
+
+=item Spawning markup (using minibuffer for input?)
+
+=item Begin/end block
+
+=item For block
+
+=item Rendering and showing in EWW
+
+=item Hook to render on save (variable to set default renderer: text, html, man, latex, fm)
+
+=item Keymap for above functions
+
+=back
+
+=head2 Resources
+
+L<Keymapping|http://xahlee.info/emacs/emacs/elisp_create_major_mode_keymap.html>
+
+L<POD overview|https://perldoc.perl.org/perlpod>
+
+=cut
