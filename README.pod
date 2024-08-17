@@ -39,7 +39,9 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =head2 TODO
 
-Boilerplate runs on hook, so no problem there
+=head2 Overview
+
+=head3 Keymap
 
 Structural = M, markup = C (that way I can reuse mnemonic binds)
 
