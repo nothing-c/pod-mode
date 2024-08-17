@@ -17,6 +17,8 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Insert heading (1/2/3/4/5/6)
 
+=item Insert list indent
+
 =back
 
 =head2 TODO
@@ -24,8 +26,6 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 =over
 
 =item Hook for inserting boilerplate in empty file
-
-=item Insert list indent
 
 =item Insert list item
 

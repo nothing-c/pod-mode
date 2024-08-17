@@ -16,5 +16,11 @@
   (insert (concat "\n=head" (int-to-string n)))
   ()) ;; This doesn't need error handling b/c it's only getting called from the keymap
 
+(defun pod-insert-over ()
+  "Insert =over ... =back for lists"
+  (insert "=over\n\n\n\n=back\n")
+  (re-search-backward "=over")
+  (next-line))
+
 (provide 'pod-mode)
 
