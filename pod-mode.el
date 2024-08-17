@@ -31,29 +31,35 @@
 
 (defun pod-insert-heading (n)
   "Insert heading of type n"
+  (interactive)
   (insert (concat "\n=head" (int-to-string n)))
   ()) ;; This doesn't need error handling b/c it's only getting called from the keymap
 
 (defun pod-insert-over ()
   "Insert =over ... =back for lists"
+  (interactive)
   (insert "\n=over\n\n\n\n=back\n")
   (re-search-backward "=over")
   (next-line))
 
 (defun pod-insert-item ()
   "Insert =item tag within list"
+  (interactive)
   (insert "\n=item "))
 
 (defun pod-insert-begin-end ()
   "Insert =begin ... =end block"
+  (interactive)
   (insert "\n=begin\n\n\n\n=end\n"))
 
 (defun pod-insert-for ()
   "Insert =for tag"
+  (interactive)
   (insert "\n=for "))
 
 (defun pod-insert-markup (b e)
   "Insert markup tag with beginning string b and end string e (e.g., b = 'L<' and e = '>' for a hyperlink)"
+  (interactive)
   (let ((rb (region-beginning)) (re (region-end)))
     (goto-char rb)
     (insert b)
@@ -62,62 +68,75 @@
 
 (defun pod-insert-italic-region ()
   "Italicize the region"
+  (interactive)
   (pod-insert-markup "I<" ">"))
 
 (defun pod-insert-bold-region ()
   "Bold the region"
+  (interactive)
   (pod-insert-markup "B<" ">"))
 
 (defun pod-insert-link-region ()
   "Linkify the region (leaving the address empty)"
+  (interactive)
   (pod-insert-markup "L<" "|>"))
 
 (defun pod-insert-code-region ()
   "Format the region as code"
+  (interactive)
   (pod-insert-markup "C<" ">"))
 
 (defun pod-insert-space-region ()
   "Format the region as non-breaking space text"
+  (interactive)
   (pod-insert-markup "S<" ">"))
 
 (defun pod-insert-italic ()
   "Insert italics and position cursor inside"
+  (interactive)
   (insert "I<>")
   (backward-char))
 
 (defun pod-insert-bold ()
   "Insert bold tag and position cursor inside"
+  (interactive)
   (insert "B<>")
   (backward-char))
 
 (defun pod-insert-link ()
   "Insert hyperlink and position cursor inside"
+  (interactive)
   (insert "L<|>")
   (backward-char)
   (backward-char))
 
 (defun pod-insert-code ()
   "Insert codeblock and position cursor inside"
+  (interactive)
   (insert "C<>")
   (backward-char))
 
 (defun pod-insert-escape ()
   "Insert escaped character tag and position cursor inside"
+  (interactive)
   (insert "E<>")
   (backward-char))
 
 (defun pod-insert-filename ()
   "Insert filename tag and position cursor inside"
+  (interactive)
   (insert "F<>")
   (backward-char))
 
 (defun pod-insert-space ()
   "Insert nonbreaking space text and position cursor inside"
+  (interactive)
   (insert "S<>")
   (backward-char))
 
 (defun pod-insert-null ()
   "Insert null tag"
+  (interactive)
   (insert "Z<>"))
 
 (defvar pod-mode-hook '() "POD mode hook")

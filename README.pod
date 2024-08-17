@@ -41,8 +41,6 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =over
 
-=item Make all the keybinds interactive (ugh)
-
 =item Bug: on new POD buffer, length is 0, so pod-check-boilerplate chokes and dies on a bad index
 
 =back
