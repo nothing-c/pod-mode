@@ -43,6 +43,38 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Keymap for above functions
 
+Boilerplate runs on hook, so no problem there
+
+Headings: C-c C-1/2/3/4/5/6
+
+List: C-c C-o (over)
+
+Item: C-c C-p (point)
+
+Begin/end: C-c C-m (formatting mode)
+
+For: C-c C-f
+
+Italic: C-c C-i
+
+Bold: C-c C-b
+
+Link: C-c C-l
+
+Code: C-c C-c
+
+Escape: C-c C-e
+
+Filename: C-c C-n
+
+Nonbreaking space text: C-c C-s
+
+Z<>: C-c C-z
+
+Marking up region: C-c M-[letter used for spawning]
+
+Render as HTML: C-c C-r
+
 =back
 
 =head2 Resources
