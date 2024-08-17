@@ -33,15 +33,17 @@ Instead, I shall be using the time-tested technique of blind macros and the less
 
 =item Rendering and showing in EWW
 
+=item Hook for inserting boilerplate in empty file
+
 =back
 
 =head2 TODO
 
 =over
 
-=item Hook for inserting boilerplate in empty file
-
 =item Hook to render on save (variable to set default renderer: text, html, man, latex, fm)
+
+=back
 
 Boilerplate runs on hook, so no problem there
 
@@ -73,9 +75,9 @@ Nonbreaking space text: C-c C-S-s (region), C-c C-s (insert)
 
 ZZ<><Z<>>: C-c C-z
 
-Render as HTML: C-c C-r
+Render: C-c C-r
 
-=back
+Render and display as HTML: C-c M-r
 
 =head2 Resources
 

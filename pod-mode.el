@@ -120,7 +120,8 @@
   "Insert null tag"
   (insert "Z<>"))
 
-(defvar pod-mode-hook nil "POD mode hook")
+(defvar pod-mode-hook '() "POD mode hook")
+(add-hook 'pod-mode-hook 'pod-check-boilerplate)
 
 (defvar pod-mode-map (make-sparse-keymap) "POD mode keymap")
 (define-key pod-mode-map (kbd "C-c M-l") 'pod-insert-over)
@@ -146,6 +147,8 @@
 (define-key pod-mode-map (kbd "C-c C-4") '(lambda () (pod-insert-heading 4)))
 (define-key pod-mode-map (kbd "C-c C-5") '(lambda () (pod-insert-heading 5)))
 (define-key pod-mode-map (kbd "C-c C-6") '(lambda () (pod-insert-heading 6)))
+(define-key pod-mode-map (kbd "C-c C-r") 'pod-render-buffer)
+(define-key pod-mode-map (kbd "C-c M-r") 'pod-show-html)
 
 (define-derived-mode pod-mode text-mode "POD"
   "Major mode for editing Plain Old Documentation (POD)"
@@ -153,4 +156,3 @@
   (run-hooks 'pod-mode-hook))
 
 (provide 'pod-mode)
-
