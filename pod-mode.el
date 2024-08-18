@@ -23,7 +23,9 @@
   
 (defun pod-insert-boilerplate ()
   "Insert the =pod ... =cut tags to define the POD area"
-  (insert "=pod\n\n\n\n=cut\n"))
+  (insert "=pod\n\n\n\n=cut\n")
+  (beginning-of-buffer)
+  (next-line))
 
 (defun pod-check-boilerplate ()
   "Check if the buffer requires boilerplate, and, if it does, insert the boilerplate"
@@ -34,7 +36,7 @@
 (defun pod-insert-heading (n)
   "Insert heading of type n"
   (interactive)
-  (insert (concat "\n=head " (int-to-string n)))
+  (insert (concat "\n=head" (int-to-string n) " "))
   ()) ;; This doesn't need error handling b/c it's only getting called from the keymap
 
 (defun pod-insert-over ()
