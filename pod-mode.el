@@ -42,7 +42,7 @@
 (defun pod-insert-over ()
   "Insert =over ... =back for lists"
   (interactive)
-  (insert "\n=over\n\n\n\n=back\n")
+  (insert "\n=over\n\n\n=back\n")
   (re-search-backward "=over")
   (next-line))
 
